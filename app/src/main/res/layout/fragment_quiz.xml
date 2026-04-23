@@ -1,0 +1,194 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:background="@drawable/bg_millionaire"
+    tools:context=".ui.QuizFragment">
+
+
+    <!-- Level -->
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level: 1"
+        android:layout_marginTop="18dp"
+        android:textColor="#FFD700"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/iv_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_logo"
+        app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+        android:layout_marginEnd="10dp"/>
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/millionaire_logo"
+        android:contentDescription="Millionaire Logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Winnings -->
+    <TextView
+        android:id="@+id/tv_winnings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Winnings: $0"
+        android:layout_marginTop="18dp"
+        android:textColor="#00FF00"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_logo"
+        app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+        android:layout_marginStart="10dp"/>
+
+    <!-- Question -->
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/millionaire_question_box"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="Question text will appear here..."
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_level" />
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Time left: 30s"
+        android:textColor="#FF9800"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_question" />
+
+    <!-- Answer buttons -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_option_a"
+        style="@style/MillionaireAnswerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="A: Option A"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_timer" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_option_b"
+        style="@style/MillionaireAnswerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="B: Option B"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_option_a" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_option_c"
+        style="@style/MillionaireAnswerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="C: Option C"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_option_b" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_option_d"
+        style="@style/MillionaireAnswerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="D: Option D"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_option_c" />
+
+    <!-- Lifelines -->
+    <LinearLayout
+        android:id="@+id/lifelines_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_option_d">
+
+        <ImageButton
+            android:id="@+id/btn_5050"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="12dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="50:50"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fifty_fifty" />
+
+        <ImageButton
+            android:id="@+id/btn_phone"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginHorizontal="12dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="Phone a Friend"
+            android:scaleType="fitCenter"
+            android:src="@drawable/phone_a_friend" />
+
+        <ImageButton
+            android:id="@+id/btn_google"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="12dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="Google 30s"
+            android:scaleType="fitCenter"
+            android:src="@drawable/google" />
+    </LinearLayout>
+
+    <!-- Quit button -->
+    <ImageButton
+        android:id="@+id/btn_quit"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="0dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:contentDescription="Quit"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_quit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

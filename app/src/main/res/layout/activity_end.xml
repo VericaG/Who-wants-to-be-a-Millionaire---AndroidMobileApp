@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_millionaire"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_end_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="End of the Game"
+        android:textColor="#FFD700"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/tv_end_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="You quit the game!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/tv_prize_won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Prize won:"
+        android:textColor="#FFD700"
+        android:textSize="20sp" />
+
+    <!-- Sum -->
+    <TextView
+        android:id="@+id/tv_end_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="1 000 000$"
+        android:textColor="#00E676"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <!-- Level -->
+    <TextView
+        android:id="@+id/tv_end_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="Level reached: 15"
+        android:textColor="#B0BEC5"
+        android:textSize="18sp" />
+
+    <!-- Start Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_new_game"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:text="PLAY AGAIN"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#0A1F44"
+
+        app:backgroundTint="#FFD700"
+        app:cornerRadius="12dp"
+        app:rippleColor="#33FFFFFF"
+
+        android:elevation="14dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"/>
+
+</LinearLayout>

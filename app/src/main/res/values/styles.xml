@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MillionaireAnswerButton" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/bg_answer_selector</item>
+        <item name="backgroundTint">@color/blue</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+</resources>
+
